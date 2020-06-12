@@ -4,7 +4,7 @@ import 'package:fpbm/services/EventService.dart';
 import 'package:fpbm/widgets/my_header.dart';
 import 'package:flutter/material.dart';
 import '../../../helpers/colorAndTextStyle.dart';
-//import 'enventDetails.dart';
+import 'enventDetails.dart';
 
 class EventPage extends StatefulWidget {
   @override
@@ -140,13 +140,13 @@ class _EventScreenState extends State<EventPage> {
         ),
       ),
       onTap: () {
-        /*Navigator.push(
+        Navigator.push(
             context,
             MaterialPageRoute(
                 builder: (context) => EventViewDetails(
                       theEvent: event,
                       eventName: event.title,
-                    )));*/
+                    )));
       },
     );
   }
