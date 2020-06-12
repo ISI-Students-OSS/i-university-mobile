@@ -4,7 +4,7 @@ class Event {
   final String title;
   final String image;
   final String description;
-  final DateTime start_at;
+  final String start_at;
   final String duration;
 
   Event({
@@ -20,7 +20,7 @@ class Event {
       title: json['title'] as String,
       image: json['image'] as String,
       description: json['description'] as String,
-      start_at: json['start_at'] as DateTime,
+      start_at: json['start_at'] as String,
       duration: json['duration'] as String,
     );
   }
