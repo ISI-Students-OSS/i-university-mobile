@@ -161,15 +161,33 @@ class _EventScreenState extends State<EventPage> {
     return Container(
       width: 100,
       height: 100,
-      decoration: BoxDecoration(
+      /*decoration: BoxDecoration(
           shape: BoxShape.circle,
           image: DecorationImage(
               //edited by yassine cuz we don't have images locally in web app
               //down below original code
-              /*image: NetworkImage(imageUrl ??
-                  "https://source.unsplash.com/user/erondu/100x100"),*/
+              *//*image: NetworkImage(imageUrl ??
+                  "https://source.unsplash.com/user/erondu/100x100"),*//*
               image: NetworkImage("https://source.unsplash.com/user/erondu/100x100"),
-              fit: BoxFit.cover)),
+              fit: BoxFit.cover)),*/
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(50.0),
+        child: Image.network(
+          /*theEvent.image,*/
+          "https://source.unsplash.com/user/erondu/100x100",
+          fit: BoxFit.cover,
+          loadingBuilder:(BuildContext context, Widget child,ImageChunkEvent loadingProgress) {
+            if (loadingProgress == null) return child;
+            return Center(
+              child: CircularProgressIndicator(
+                value: loadingProgress.expectedTotalBytes != null ?
+                loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes
+                    : null,
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 }
