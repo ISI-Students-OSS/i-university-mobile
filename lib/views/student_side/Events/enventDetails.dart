@@ -6,11 +6,11 @@ import 'package:fpbm/models/Event.dart';
 class EventViewDetails extends StatelessWidget {
   final String eventName;
   final Event theEvent;
-
   const EventViewDetails({Key key, this.eventName, this.theEvent})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
+    print(theEvent.image);
     return Scaffold(
         body: CustomScrollView(slivers: <Widget>[
           SliverAppBar(
@@ -24,8 +24,19 @@ class EventViewDetails extends StatelessWidget {
               background: ClipRRect(
                 borderRadius: BorderRadius.vertical(bottom: Radius.circular(40)),
                 child: Image.network(
-                  theEvent.image,
+                  /*theEvent.image,*/
+                  "https://source.unsplash.com/user/erondu/500x500",
                   fit: BoxFit.cover,
+                  loadingBuilder:(BuildContext context, Widget child,ImageChunkEvent loadingProgress) {
+                    if (loadingProgress == null) return child;
+                    return Center(
+                      child: CircularProgressIndicator(
+                        value: loadingProgress.expectedTotalBytes != null ?
+                        loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes
+                            : null,
+                      ),
+                    );
+                  },
                 ),
               ),
             ),

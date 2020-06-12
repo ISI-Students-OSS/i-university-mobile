@@ -108,30 +108,36 @@ class _EventScreenState extends State<EventPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                        event.description.substring(0, 30) + '...',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.normal,
-                          color: Colors.white,
+                      Expanded(
+                        child: Text(
+                          event.description.substring(0, 30) + '...',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w400,
+                            fontStyle: FontStyle.normal,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      Text(
-                        'commencer le ' + event.start_at.toString(),
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w400,
-                          fontStyle: FontStyle.italic,
-                          color: Colors.white,
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        Expanded(
+                          child: Text(
+                            'commencer le ' + event.start_at.toString(),
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w400,
+                              fontStyle: FontStyle.italic,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -158,10 +164,12 @@ class _EventScreenState extends State<EventPage> {
       decoration: BoxDecoration(
           shape: BoxShape.circle,
           image: DecorationImage(
-              image: NetworkImage(imageUrl ??
-                  "https://source.unsplash.com/user/erondu/100x100"),
+              //edited by yassine cuz we don't have images locally in web app
+              //down below original code
+              /*image: NetworkImage(imageUrl ??
+                  "https://source.unsplash.com/user/erondu/100x100"),*/
+              image: NetworkImage("https://source.unsplash.com/user/erondu/100x100"),
               fit: BoxFit.cover)),
     );
   }
 }
-
