@@ -126,8 +126,8 @@ class _EventScreenState extends State<EventPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         Expanded(
-                          child: Text(
-                            'commencer le ' + event.start_at.toString(),
+                          child: Text(event.start_at.toString(),
+                            textAlign: TextAlign.right,
                             style: TextStyle(
                               fontSize: 16.0,
                               fontWeight: FontWeight.w400,
