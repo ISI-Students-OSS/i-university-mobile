@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fpbm/views/student_side/EventsPage.dart';
+import 'package:fpbm/views/student_side/Events/EventsPage.dart';
 import 'main.dart';
 
 class RouteGenerator {
