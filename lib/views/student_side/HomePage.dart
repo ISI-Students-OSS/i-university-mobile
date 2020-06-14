@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:fpbm/main.dart';
+import 'AboutPage.dart';
+import 'EventsPage.dart';
+import 'PwPage.dart';
+import 'WebPage.dart';
+import 'NewsPage.dart';
 
-void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class HomePage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
-    );
-  }
+  _HomePage createState() => _HomePage();
 }
 
-class HomePage extends StatelessWidget {
+class _HomePage extends State<HomePage>  {  
+  
   Size size;
 
   @override
@@ -91,7 +92,11 @@ class HomePage extends StatelessWidget {
                   // but if you have a more complex app,   will quickly get lost.
                   MaterialPageRoute(
                     builder: (context) =>
-                        FirstPage()
+                        //FirstPage()
+                        //This is condition [Position] indicates wich page you want to navigate to
+                        position == 0 ? NewsPage() : position == 1 ? EventsPage() : position == 2 ? AboutPage() :
+                        position == 3 ? PresedentPage() : position == 4 ? SecondPage(data: "Facebook page request") : position == 5 ? WebPage() :
+                        SecondPage(data: "Request unavailable") ,
                   )
               );
             },
