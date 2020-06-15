@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fpbm/route_generator.dart';
-
+import './views/menu/menu.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -33,6 +33,8 @@ class SecondPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Routing App'),
       ),
+      drawer: Menu(),
+      
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -63,6 +65,7 @@ class FirstPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Routing App'),
       ),
+      drawer: Menu(),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
