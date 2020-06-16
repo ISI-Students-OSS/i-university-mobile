@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fpbm/route_generator.dart';
+import 'package:fpbm/views/student_side/NewsPages/pages/NewsList.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class SecondPage extends StatelessWidget {
   // This is a String for the sake of an example.
   // You can use any type you want.
