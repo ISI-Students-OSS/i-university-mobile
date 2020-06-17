@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fpbm/views/student_side/MotDuPresident.dart';
 import 'main.dart';
 
 class RouteGenerator {
@@ -8,19 +9,7 @@ class RouteGenerator {
 
     switch (settings.name) {
       case '/':
-        return MaterialPageRoute(builder: (_) => FirstPage());
-      case '/second':
-      // Validation of correct data type
-        if (args is String) {
-          return MaterialPageRoute(
-            builder: (_) => SecondPage(
-              data: args,
-            ),
-          );
-        }
-        // If args is not of the correct type, return an error page.
-        // You can also throw an exception while in development.
-        return _errorRoute();
+        return MaterialPageRoute(builder: (_) => MotDuPresident());
       default:
       // If there is no such named route in the switch statement, e.g. /third
         return _errorRoute();
