@@ -3,7 +3,7 @@ import 'package:fpbm/route_generator.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'About the university',
+    title: 'Flutter Demo',
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),

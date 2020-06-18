@@ -3,10 +3,10 @@ import 'package:fpbm/models/AboutUniversity.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 
-class AboutTheUniversity {
+class AboutUniversityServices {
 
   Future<AboutUniversity> fetchAlbum() async {
-    print("Saad");
+    print("khalid");
     //here put your link to the API
     final response =
     await http.get('http://127.0.0.1:8080/mot_president/get.php');

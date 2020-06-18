@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fpbm/views/student_side/AbouttheUniversity.dart';
+import 'package:fpbm/views/student_side/FPBMAboutUniversity.dart';
 import 'main.dart';
 
 class RouteGenerator {
@@ -9,7 +9,7 @@ class RouteGenerator {
 
     switch (settings.name) {
       case '/':
-        return MaterialPageRoute(builder: (_) => AbouttheUniversity());
+        return MaterialPageRoute(builder: (_) => FPBMAboutUniversity());
       default:
       // If there is no such named route in the switch statement, e.g. /third
         return _errorRoute();
