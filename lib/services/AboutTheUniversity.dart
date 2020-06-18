@@ -1,11 +1,11 @@
 import 'dart:convert';
-import 'package:fpbm/models/MotPresident.dart';
+import 'package:fpbm/models/AboutUniversity.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 
-class MotPresidentServices {
+class AboutTheUniversity {
 
-  Future<MotPresident> fetchAlbum() async {
+  Future<AboutUniversity> fetchAlbum() async {
     print("Saad");
     //here put your link to the API
     final response =
@@ -16,7 +16,7 @@ class MotPresidentServices {
       // If the server did return a 200 OK response,
       // then parse the JSON.
       print("enter");
-      return MotPresident.fromJson(json.decode(response.body));
+      return AboutUniversity.fromJson(json.decode(response.body));
     } else {
       print("enter");
       // If the server did not return a 200 OK response,
