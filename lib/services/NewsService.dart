@@ -1,10 +1,12 @@
 import 'dart:convert';
-import 'package:fpbm/views/student_side/NewsPages/models/NewsArticle.dart';
+import 'package:fpbm/models/NewsArticle.dart';
 import 'package:http/http.dart' as http;
+import 'package:fpbm/helpers/Constant.dart';
 
-class WebsService {
 
-  final String url = "http://192.168.1.5:8000/api/v1/news";
+class NewsService {
+
+  final String url = Constants.API_ADDRESS + "news";
 
   Future<List<Articls>> getArticls() async {
     final response = await http.get(url);
