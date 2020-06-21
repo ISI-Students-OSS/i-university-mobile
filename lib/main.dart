@@ -4,6 +4,7 @@ import 'package:fpbm/views/student_side/NewsPages/pages/NewsList.dart';
 
 void main() => runApp(MyApp());
 
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
