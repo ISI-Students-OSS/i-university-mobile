@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fpbm/views/student_side/Events/EventsPage.dart';
 import 'main.dart';
 import 'views/student_side/News/NewsList.dart';
 
@@ -9,8 +10,7 @@ class RouteGenerator {
 
     switch (settings.name) {
       case '/':
-        //return MaterialPageRoute(builder: (_) => FirstPage());
-        return MaterialPageRoute(builder: (_) => NewsPage());
+        return MaterialPageRoute(builder: (_) => EventPage());
       case '/second':
       // Validation of correct data type
         if (args is String) {
