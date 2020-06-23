@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
-class AboutPage extends StatefulWidget {
+class WebPage extends StatefulWidget {
   @override
-  _AboutPage createState() => _AboutPage();
+  _WebPage createState() => _WebPage();
 }
 
-class _AboutPage extends State<AboutPage> {
+class _WebPage extends State<WebPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('About App'),
+        title: Text('Web App'),
       ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text(
-              'About Page',
+              'Web Page',
               style: TextStyle(fontSize: 50),
             ),
           ],

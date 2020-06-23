@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
-class AboutPage extends StatefulWidget {
+class NewsPage extends StatefulWidget {
   @override
-  _AboutPage createState() => _AboutPage();
+  _NewsPage createState() => _NewsPage();
 }
 
-class _AboutPage extends State<AboutPage> {
+class _NewsPage extends State<NewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('About App'),
+        title: Text('News App'),
       ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text(
-              'About Page',
+              'News Page',
               style: TextStyle(fontSize: 50),
             ),
           ],

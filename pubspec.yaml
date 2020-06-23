@@ -50,6 +50,13 @@ flutter:
     - assets/president-4.png
     - assets/logo-1.jpg
     - assets/logo-2.jpg
+    - assets/images/event_icon.png
+    - assets/images/facebook_icon.png
+    - assets/images/web_icon.png
+    - assets/images/university_icon.png
+    - assets/images/president_word_icon.png
+    - assets/images/news_icon.png
+  #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

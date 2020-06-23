@@ -44,3 +44,4 @@ class EventPage extends StatelessWidget {
     );
   }
 }
+
