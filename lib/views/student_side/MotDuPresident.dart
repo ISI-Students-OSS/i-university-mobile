@@ -14,13 +14,10 @@ class MotDuPresident extends StatefulWidget {
 
 class _MotDuPresidentState extends State<MotDuPresident> {
 
-  String presidentImage = 'assets/space-2.jpg';
-  String motpresident = 'Adding a shadow or glow to your UI can '
-      'add a nice finishing touch to the design. Adding elevation is nice '
-      'for a feeling of depth, but we don’t have too much control over it: '
-      'the shadow is what it is based on how elevated the widget is and we’re '
-      'not able to give the shadow a nice color. Let’s take a look at how we can '
-      'create our own shadow or glow and give our UI that finishing touch!';
+  String presidentImage = 'assets/president-4.png';
+  String motpresident = 'AL\'université Sultan Moulay Slimane constitue un ensemble '
+      'd\'établissements de la région de Béni Mellal - '
+      'Khénifra, au Maroc, dont la majorité se trouve à Béni Mellal.';
 
   final MotPresidentServices presidentServices =  MotPresidentServices();
   Future<MotPresident> futureMotPresident;
@@ -42,12 +39,12 @@ class _MotDuPresidentState extends State<MotDuPresident> {
           ),
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+      body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Center(
               child: Container(
+                margin: EdgeInsets.fromLTRB(0, 14, 0, 10),
                 decoration: BoxDecoration(
                     color: Colors.grey,
                     shape: BoxShape.circle,
@@ -61,21 +58,45 @@ class _MotDuPresidentState extends State<MotDuPresident> {
                 ),
                 child: CircleAvatar(
                   backgroundImage: AssetImage('$presidentImage'),
-                  radius: 60.0,
+                  radius: 70.0,
                 ),
               ),
             ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 0.0),
             Card(
+              semanticContainer: true,
+              clipBehavior: Clip.antiAliasWithSaveLayer,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
+              elevation: 5,
+              margin: EdgeInsets.all(10),
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                     Text('$motpresident'),
+                     Text(
+                         '$motpresident',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.grey[700],
+                          ),
+                     ),
+                    Text(
+                      '$motpresident',
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        color: Colors.grey[700],
+                      ),
+                    ),
+                    Text(
+                      '$motpresident',
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        color: Colors.grey[700],
+                      ),
+                    ),
                     /* FutureBuilder<MotPresident>(
                       future: futureMotPresident,
                       builder: (context, snapshot) {
