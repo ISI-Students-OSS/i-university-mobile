@@ -3,6 +3,7 @@ import 'package:fpbm/route_generator.dart';
 
 void main() => runApp(MyApp());
 
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class SecondPage extends StatelessWidget {
   // This is a String for the sake of an example.
   // You can use any type you want.
