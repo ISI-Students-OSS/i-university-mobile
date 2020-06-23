@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fpbm/views/student_side/FPBMAboutUniversity.dart';
 import 'package:fpbm/views/student_side/Events/EventsPage.dart';
 import 'main.dart';
 import 'views/student_side/News/NewsList.dart';
