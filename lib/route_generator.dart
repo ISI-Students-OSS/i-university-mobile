@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fpbm/views/student_side/MotDuPresident.dart';
+import 'package:fpbm/views/student_side/FPBMAboutUniversity.dart';
+import 'package:fpbm/views/student_side/Events/EventsPage.dart';
 import 'main.dart';
+import 'views/student_side/News/NewsList.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -9,7 +11,19 @@ class RouteGenerator {
 
     switch (settings.name) {
       case '/':
-        return MaterialPageRoute(builder: (_) => MotDuPresident());
+        return MaterialPageRoute(builder: (_) => EventPage());
+      case '/second':
+      // Validation of correct data type
+        if (args is String) {
+          return MaterialPageRoute(
+            builder: (_) => SecondPage(
+              data: args,
+            ),
+          );
+        }
+        // If args is not of the correct type, return an error page.
+        // You can also throw an exception while in development.
+        return _errorRoute();
       default:
       // If there is no such named route in the switch statement, e.g. /third
         return _errorRoute();
