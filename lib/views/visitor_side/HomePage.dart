@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fpbm/main.dart';
-import 'package:fpbm/views/menu/menu.dart';
-import 'About/AboutPage.dart';
-import 'Events/EventsPage.dart';
-import 'News/NewsList.dart';
-import 'Pw/PwPage.dart';
-
-
+import 'package:fpbm/views/visitor_side/About/AboutPage.dart';
+import 'package:fpbm/views/visitor_side/Events/EventsPage.dart';
+import 'package:fpbm/views/visitor_side/News/NewsList.dart';
+import 'package:fpbm/views/visitor_side/Pw/PwPage.dart';
+import 'package:fpbm/views/visitor_side/menu/menu.dart';
 
 class HomePage extends StatefulWidget {
   @override

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fpbm/views/student_side/About/AboutPage.dart';
-import 'package:fpbm/views/student_side/Events/EventsPage.dart';
 import 'main.dart';
-import 'views/student_side/News/NewsList.dart';
-import 'package:fpbm/views/student_side/HomePage.dart';
+import 'package:fpbm/views/visitor_side/HomePage.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
