@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fpbm/route_generator.dart';
 
-void main() => runApp(MyApp());
+import 'views/student_side/News/NewsList.dart';
 
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

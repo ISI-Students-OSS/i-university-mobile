@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fpbm/models/Event.dart';
 import 'package:fpbm/services/EventService.dart';
-import 'package:fpbm/widgets/my_header.dart';
 import 'package:flutter/material.dart';
 import '../../../helpers/colorAndTextStyle.dart';
 import 'enventDetails.dart';
@@ -22,9 +21,6 @@ class _EventScreenState extends State<EventPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          MyHeader(
-            text: "les événements",
-          ),
           FutureBuilder(
             future: eventService.getEvents(),
             builder:
