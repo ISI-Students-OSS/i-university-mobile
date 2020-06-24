@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fpbm/models/Event.dart';
 import 'package:fpbm/services/EventService.dart';
+import 'package:fpbm/views/menu/menu.dart';
 import 'package:fpbm/widgets/my_header.dart';
 import 'package:flutter/material.dart';
 import '../../../helpers/colorAndTextStyle.dart';
@@ -18,6 +19,15 @@ class _EventScreenState extends State<EventPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          backgroundColor: Colors.blue,
+          
+          title: Text(
+            "Evénements",
+            textAlign: TextAlign.center,
+          ),
+        ),
+        drawer: Menu(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
