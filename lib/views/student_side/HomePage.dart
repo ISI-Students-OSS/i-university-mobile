@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fpbm/main.dart';
+import 'package:fpbm/views/menu/menu.dart';
 import 'AboutPage.dart';
 import 'EventsPage.dart';
 import 'PwPage.dart';
@@ -29,12 +30,13 @@ class _HomePage extends State<HomePage>  {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          leading: Icon(Icons.menu),
+          
           title: Text(
             "Accueil",
             textAlign: TextAlign.center,
           ),
         ),
+        drawer: Menu(),
         body: Stack(
 
           children: <Widget>[

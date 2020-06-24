@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fpbm/models/Event.dart';
 import 'package:fpbm/services/EventService.dart';
+import 'package:fpbm/views/menu/menu.dart';
 
 class EventPage extends StatelessWidget {
 
@@ -9,9 +10,15 @@ class EventPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Events"),
+       appBar: AppBar(
+          backgroundColor: Colors.blue,
+          
+          title: Text(
+            "Evénements",
+            textAlign: TextAlign.center,
+          ),
         ),
+        drawer: Menu(),
         body: Container(
           /*decoration: BoxDecoration(
               image: DecorationImage(
