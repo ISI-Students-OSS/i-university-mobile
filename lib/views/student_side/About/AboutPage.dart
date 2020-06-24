@@ -7,12 +7,12 @@ import 'dart:async';
 //I use this link as reference for getting data -
 // from  API https://flutter.dev/docs/cookbook/networking/fetch-data
 
-class FPBMAboutUniversity extends StatefulWidget {
+class AboutPage extends StatefulWidget {
   @override
-  _FPBMAboutUniversityState createState() => _FPBMAboutUniversityState();
+  _AboutPageState createState() => _AboutPageState();
 }
 
-class _FPBMAboutUniversityState extends State<FPBMAboutUniversity> {
+class _AboutPageState extends State<AboutPage> {
 
   String universityImage = 'assets/logo-2.jpg';
   String universityTitle = 'Faculté Polydisciplinaire - Université Sultan Moulay Slimane ';
@@ -21,9 +21,6 @@ class _FPBMAboutUniversityState extends State<FPBMAboutUniversity> {
       'ouvert à partir de l’année universitaire 2003-2004 pour améliorer l’offre de '
       'formation de l’université et répondre aux attentes de son environnement socioéconomique régional et national.';
   String fillier = 'Filières';
-
-
-
 
   final AboutUniversityServices aboutUniversityServices =  AboutUniversityServices();
   Future<AboutUniversity> futureAboutUniversity;

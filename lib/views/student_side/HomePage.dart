@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fpbm/main.dart';
 import 'package:fpbm/views/menu/menu.dart';
-import 'AboutPage.dart';
-import 'EventsPage.dart';
-import 'PwPage.dart';
-import 'WebPage.dart';
-import 'NewsPage.dart';
+import 'About/AboutPage.dart';
+import 'Events/EventsPage.dart';
+import 'News/NewsList.dart';
+import 'Pw/PwPage.dart';
+
 
 
 class HomePage extends StatefulWidget {
@@ -27,6 +27,7 @@ class _HomePage extends State<HomePage>  {
         primarySwatch: Colors.blue,
 
       ),
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
@@ -97,7 +98,7 @@ class _HomePage extends State<HomePage>  {
                         //FirstPage()
                         //This is condition [Position] indicates wich page you want to navigate to
                         position == 0 ? NewsPage() : position == 1 ? EventPage() : position == 2 ? AboutPage() :
-                        position == 3 ? PresedentPage() : position == 4 ? SecondPage(data: "Facebook page request") : position == 5 ? WebPage() :
+                        position == 3 ? MotDuPresident() : position == 4 ? SecondPage(data: "Facebook page request") : position == 5 ? AboutPage() :
                         SecondPage(data: "Request unavailable") ,
                   )
               );

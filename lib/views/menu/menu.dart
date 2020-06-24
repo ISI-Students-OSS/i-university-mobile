@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fpbm/views/student_side/AboutPage.dart';
+import 'package:fpbm/views/student_side/About/AboutPage.dart';
 import 'package:fpbm/views/student_side/Events/EventsPage.dart';
 import 'package:fpbm/views/student_side/HomePage.dart';
 import 'package:fpbm/views/student_side/News/NewsList.dart';
-import 'package:fpbm/views/student_side/PwPage.dart';
-import 'package:fpbm/views/student_side/WebPage.dart';
-
+import 'package:fpbm/views/student_side/Pw/PwPage.dart';
 
 class Menu extends StatelessWidget{
   @override
@@ -96,7 +94,7 @@ class Menu extends StatelessWidget{
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) =>
-                        PresedentPage()
+                        MotDuPresident()
                   ),
                 );
               },
@@ -127,7 +125,7 @@ class Menu extends StatelessWidget{
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) =>
-                        WebPage()
+                        EventPage()
                   ),
                 );
               },

@@ -27,7 +27,6 @@ class _EventScreenState extends State<EventPage> {
             textAlign: TextAlign.center,
           ),
         ),
-        drawer: Menu(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,

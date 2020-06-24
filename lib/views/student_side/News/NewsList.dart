@@ -28,7 +28,6 @@ class _NewsScreenState extends State<NewsPage> {
             textAlign: TextAlign.center,
           ),
         ),
-        drawer: Menu(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
