@@ -5,6 +5,10 @@ import 'package:fpbm/views/visitor_side/Events/EventsPage.dart';
 import 'package:fpbm/views/visitor_side/News/NewsList.dart';
 import 'package:fpbm/views/visitor_side/Pw/PwPage.dart';
 import 'package:fpbm/views/visitor_side/menu/menu.dart';
+import 'UniversityView.dart';
+
+import 'package:url_launcher/url_launcher.dart'; 
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,7 +17,22 @@ class HomePage extends StatefulWidget {
 
 class _HomePage extends State<HomePage>  {  
   
-  Size size;
+  Size size; 
+
+
+  Future<void> _launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: true,
+        forceWebView: false,
+        //headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -73,8 +92,10 @@ class _HomePage extends State<HomePage>  {
     );
   }
 
-  Widget createGridItem(int position, String title, String imgPath) {
+  
 
+  Widget createGridItem(int position, String title, String imgPath) {
+    const String url = 'web.facebook.com/fpbm';
     return Builder(builder: (context) {
       return Padding(
         padding:
@@ -95,8 +116,12 @@ class _HomePage extends State<HomePage>  {
                     builder: (context) =>
                         //FirstPage()
                         //This is condition [Position] indicates wich page you want to navigate to
-                        position == 0 ? NewsPage() : position == 1 ? EventPage() : position == 2 ? AboutPage() :
-                        position == 3 ? MotDuPresident() : position == 4 ? SecondPage(data: "Facebook page request") : position == 5 ? AboutPage() :
+                        position == 0 ? NewsPage() : 
+                        position == 1 ? EventPage() : 
+                        position == 2 ? AboutPage() :
+                        position == 3 ? MotDuPresident() : 
+                        position == 4 ? _launchInBrowser(url) :
+                        position == 5 ? UniversityView() :
                         SecondPage(data: "Request unavailable") ,
                   )
               );
@@ -114,7 +139,7 @@ class _HomePage extends State<HomePage>  {
                           style: TextStyle(
                               color: Colors.black,
                               fontFamily: 'Montserrat',
-                              fontSize: 18.0
+                              fontSize: 17.0
                           ),
                         ),
                       ),
