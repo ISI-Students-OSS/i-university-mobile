@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fpbm/models/NewsArticle.dart';
 import 'package:fpbm/services/NewsService.dart';
-import 'package:fpbm/widgets/my_header.dart';
 import 'package:flutter/material.dart';
 import '../../../helpers/colorAndTextStyle.dart';
 import 'NewsDetails.dart';
@@ -23,17 +22,16 @@ class _NewsScreenState extends State<NewsPage> {
           backgroundColor: Colors.blue,
           
           title: Text(
-            "Actualités",
+            "Les Actualités",
             textAlign: TextAlign.center,
           ),
         ),
+
       body: Column(
+
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          MyHeader(
-            text: "Les Actualités",
-          ),
           FutureBuilder(
             future: newsService.getArticls(),
             builder:
