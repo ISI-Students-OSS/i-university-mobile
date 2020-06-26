@@ -21,8 +21,9 @@ class _UniversityViewState extends State<UniversityView> {
         appBar: AppBar(
           title: Text('Navigation'),
         ),
+        //By deefault we load faculter website !! then the floating button shown above will redirect to university website
         body: WebView(
-            initialUrl: "https://www.google.com",
+            initialUrl: "http://www.fpbm.ma/",
             javascriptMode: JavascriptMode.unrestricted,
             onWebViewCreated: (WebViewController webViewController) {
               _controller.complete(webViewController);
@@ -30,7 +31,7 @@ class _UniversityViewState extends State<UniversityView> {
         ),
 
         
-        
+      //This Floating button redirect to university official website 
       floatingActionButton: FutureBuilder<WebViewController>(
         future: _controller.future,
         builder: (BuildContext context,
@@ -39,12 +40,12 @@ class _UniversityViewState extends State<UniversityView> {
             return FloatingActionButton(
  
               //Couldnt show the image of university icon dunno why???
-              //child: Image.asset('assets/images/Image1.png'),
+              //child: Image.asset('assets/images/logo.png'),
 
               child: Image.asset('assets/images/web_icon.png'),
 
               onPressed: () {
-                controller.data.loadUrl("http://usms.ac.ma");
+                controller.data.loadUrl("http://www.usms.ac.ma/website/");
               },
             );
           }

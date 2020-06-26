@@ -6,7 +6,6 @@ import 'package:fpbm/views/visitor_side/News/NewsList.dart';
 import 'package:fpbm/views/visitor_side/Pw/PwPage.dart';
 import 'package:fpbm/views/visitor_side/menu/menu.dart';
 import 'UniversityView.dart';
-
 import 'package:url_launcher/url_launcher.dart'; 
 
 
@@ -15,25 +14,10 @@ class HomePage extends StatefulWidget {
   _HomePage createState() => _HomePage();
 }
 
-class _HomePage extends State<HomePage>  {  
+class _HomePage extends State<HomePage>  { 
   
   Size size; 
-
-
-  Future<void> _launchInBrowser(String url) async {
-    if (await canLaunch(url)) {
-      await launch(
-        url,
-        forceSafariVC: true,
-        forceWebView: false,
-        //headers: <String, String>{'my_header_key': 'my_header_value'},
-      );
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
-
+ 
   @override
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
@@ -91,11 +75,9 @@ class _HomePage extends State<HomePage>  {
       ),
     );
   }
-
-  
+ 
 
   Widget createGridItem(int position, String title, String imgPath) {
-    const String url = 'web.facebook.com/fpbm';
     return Builder(builder: (context) {
       return Padding(
         padding:
@@ -120,7 +102,7 @@ class _HomePage extends State<HomePage>  {
                         position == 1 ? EventPage() : 
                         position == 2 ? AboutPage() :
                         position == 3 ? MotDuPresident() : 
-                        position == 4 ? _launchInBrowser(url) :
+                        position == 4 ? NavigateByUrl() :
                         position == 5 ? UniversityView() :
                         SecondPage(data: "Request unavailable") ,
                   )
@@ -150,6 +132,63 @@ class _HomePage extends State<HomePage>  {
           ),
       );
     });
+  }
+
+
+
+
+}
+
+
+
+class NavigateByUrl extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('External Link'),
+      ),
+      drawer: Menu(),
+
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text(
+              'You will be redirected to Facebook',
+              style: TextStyle(fontSize: 25),
+              
+            ),
+
+            //Got problem here because of the button. the button was auto clicked so the page generated as an error!!!! you can un-comment and see
+            /*
+            RaisedButton( 
+              child: new Text('Facebook'),
+              onPressed: _launchURL(),
+            ),
+            */
+            
+          ],
+        ),
+      ),
+    );
+  }
+
+
+  
+   _launchURL() async {
+    const url = 'https://web.facebook.com/usms.ac.ma/';
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        enableDomStorage: true,
+        headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
 
