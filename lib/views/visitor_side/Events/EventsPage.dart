@@ -20,7 +20,6 @@ class _EventScreenState extends State<EventPage> {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.blue,
-          
           title: Text(
             "Evénements",
             textAlign: TextAlign.center,
@@ -30,9 +29,7 @@ class _EventScreenState extends State<EventPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          MyHeader(
-            text: "les événements",
-          ),
+          //MyHeader(text: "les événements",),
           FutureBuilder(
             future: eventService.getEvents(),
             builder:

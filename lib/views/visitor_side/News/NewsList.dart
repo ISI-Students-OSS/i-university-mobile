@@ -31,9 +31,7 @@ class _NewsScreenState extends State<NewsPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          MyHeader(
-            text: "Les Actualités",
-          ),
+          //MyHeader(text: "Les Actualités",),
           FutureBuilder(
             future: newsService.getArticls(),
             builder:
