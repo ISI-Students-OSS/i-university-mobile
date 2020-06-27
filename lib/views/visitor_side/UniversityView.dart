@@ -19,7 +19,7 @@ class _UniversityViewState extends State<UniversityView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Navigation'),
+          title: Text('FP Béni Mellal'),
         ),
         //By deefault we load faculter website !! then the floating button shown above will redirect to university website
         body: WebView(
@@ -30,22 +30,24 @@ class _UniversityViewState extends State<UniversityView> {
             }
         ),
 
-        
       //This Floating button redirect to university official website 
       floatingActionButton: FutureBuilder<WebViewController>(
         future: _controller.future,
+        // ignore: missing_return
         builder: (BuildContext context,
             AsyncSnapshot<WebViewController> controller) {
           if (controller.hasData) {
+            // ignore: missing_return, missing_return
             return FloatingActionButton(
  
               //Couldnt show the image of university icon dunno why???
               //child: Image.asset('assets/images/logo.png'),
 
-              child: Image.asset('assets/images/web_icon.png'),
+              child: Image.asset('assets/images/logo.png'),
 
+              // ignore: missing_return
               onPressed: () {
-                controller.data.loadUrl("http://www.usms.ac.ma/website/");
+                controller.data.loadUrl("http://www.fpbm.ma/new/");
               },
             );
           }
