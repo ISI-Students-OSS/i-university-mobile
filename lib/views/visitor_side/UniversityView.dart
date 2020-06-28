@@ -24,7 +24,7 @@ class _UniversityViewState extends State<UniversityView> {
         //By deefault we load faculter website !! then the floating button shown above will redirect to university website
         body: WebView(
             initialUrl: "http://www.fpbm.ma/",
-            javascriptMode: JavascriptMode.unrestricted,
+            //javascriptMode: JavascriptMode.unrestricted,
             onWebViewCreated: (WebViewController webViewController) {
               _controller.complete(webViewController);
             }
@@ -48,6 +48,7 @@ class _UniversityViewState extends State<UniversityView> {
               // ignore: missing_return
               onPressed: () {
                 controller.data.loadUrl("http://www.fpbm.ma/new/");
+                //controller.data.reload();
               },
             );
           }
